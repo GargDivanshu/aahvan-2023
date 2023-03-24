@@ -41,7 +41,7 @@ const Profile = ({users}) => {
       // setLoading(true);
   
       try {
-        const response = await fetch('http://localhost:3000/api/user', {
+        const response = await fetch('https://aahvan-2023.vercel.app/api/user', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
