@@ -48,7 +48,7 @@ async function handler(req, resp){
 
 
 } else if(req.method === 'PUT') {
-    const {_id, name, image, email, college, filename} = req.body
+    const {_id, name, image, email, college, filename, pname, pnumber} = req.body
 
     // console.log(req.body)
 
@@ -61,7 +61,9 @@ async function handler(req, resp){
         {
             $set: {
                    filename: filename,
-                   college: college
+                   college: college,
+                   secretary_name: pname,
+                   secretary_no: pnumber,
             }
             
            }

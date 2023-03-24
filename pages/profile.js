@@ -1,15 +1,28 @@
 import React, {useState, useEffect} from 'react'
 import {useSession, signIn, signOut} from 'next-auth/react'
 import {useRouter} from 'next/router'
+import {AiFillFileExcel} from 'react-icons/ai'
+import {message} from 'antd'
 
 
 const Profile = ({users}) => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'This is a success message',
+    });
+  };
+
+  const router = useRouter()
     // console.log(users)
     const { data: session } = useSession()
     const { push, asPath } = useRouter()
 
     const [college, setCollege] = useState("")
     const [file, setFile] = useState("")
+    const [pname, setPname] = useState("")
+    const [pnumber, setPnumber] = useState("")
 
     const [myuserdata, setMyuserData] = useState([])
  
@@ -21,7 +34,7 @@ const Profile = ({users}) => {
     
     const handleSubmit = async (e) => {
         // console.log("hello for now")
-         e.preventDefault()
+        e.preventDefault()
         let data = await fetch("https://aahvan-2023.vercel.app/api/user", {
             method: 'PUT',
             headers: {
@@ -30,10 +43,12 @@ const Profile = ({users}) => {
             body: JSON.stringify({
                 email: session.user.email,
                 college: college, 
-                filename: file
+                filename: file,
+                pname: pname,
+                pnumber: pnumber
             })
         })
-
+       success()
 
     }
 
@@ -78,6 +93,13 @@ const Profile = ({users}) => {
         <div
         className='w-10/12 px-10 py-5'
         >
+        Welcome to AAHVAN - 23'. This is our registration portal and we request you to submit your details below.
+        <br></br>
+        We require you to send us the details of your student participants in a excel sheet along with edit access <br></br>
+        <button onClick={()=>window.open('https://docs.google.com/spreadsheets/d/1TMIBwcX1R7j8uTpjXrejuE-zATzzCAcm9fwQ8R6As9g/edit?usp=sharing','_blank')}
+        className="bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out flex my-4 px-1 self-center"><AiFillFileExcel
+          fontSize={25}
+        /> Sample File here </button>
           <div
           className='text-2xl font-bold text-[#FFB124] pb-5 stencil uppercase'
           >Profile</div>
@@ -88,9 +110,28 @@ const Profile = ({users}) => {
          
         
         </div>
+       
         <form onSubmit={handleSubmit} 
         className='w-10/12 px-10 py-5 bg-[#1F1F1F] rounded-md flex flex-col gap-5'
         >
+
+            <label>
+              Sports Secretary Name
+            </label>
+            <input
+            className="w-full bg-transparent border-2 py-2 px-2 rounded-lg border-[#BDA54F] outline-none"
+              type="text" value={pname} onChange={(e)=>setPname(e.target.value)}
+            />
+
+            <label>
+              Sports Secretary Number
+            </label>
+            <input
+            className="w-full bg-transparent border-2 py-2 px-2 rounded-lg border-[#BDA54F] outline-none"
+              type="text" value={pnumber} onChange={(e)=>setPnumber(e.target.value)}
+            />
+
+
             <label>
               College
             </label>
@@ -108,7 +149,11 @@ const Profile = ({users}) => {
               type="text" value={file} onChange={(e)=>setFile(e.target.value)}
             />
 
-            <button type="submit" className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] self-center'>
+           
+
+            <button 
+            onClick={success}
+            type="submit" className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] self-center'>
               Submit
             </button>
         </form>
