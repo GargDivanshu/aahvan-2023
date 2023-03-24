@@ -3,7 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import About from './about'
 import Events from './events'
+import {useRouter} from 'next/router'
+
 export default function Home() {
+
+  const router = useRouter()
   return (
     <div>
       <Head>
@@ -23,6 +27,11 @@ export default function Home() {
             <h2>
               6th - 8th April 2023
             </h2>
+            <button 
+            onClick={() => {router.push('auth/signin')}}
+            className="bg-[#FFB024] hover:text-[#FFB024] hover:bg-white text-black m-3 px-3 py-2 text-4xl font-bold stencil rounded-md">
+              Register
+            </button>
           </div>
         </div>
       </main>

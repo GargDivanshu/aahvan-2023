@@ -81,10 +81,10 @@ const Profile = ({users}) => {
           <div
           className='text-2xl font-bold text-[#FFB124] pb-5 stencil uppercase'
           >Profile</div>
-          <p>Your info : </p>
+          {/* <p>Your info : </p>
          
           <p>college : {myuserdata.filter((user) => user.email === session?.user?.email)[0].college} </p>
-          <p>last uploaded file : {myuserdata.filter((user) => user.email === session?.user?.email)[0].filename}</p>
+          <p>last uploaded file : {myuserdata.filter((user) => user.email === session?.user?.email)[0].filename}</p> */}
          
         
         </div>
