@@ -8,7 +8,7 @@ const Contact = () => {
                 <p className="font-inter text-lg font-semibold pb-20 text-white"> 
                 <span class="my-4 stencil text-3xl text-black ">Aditya </span> - 90575 41946, ady1812sha@gmail.com
                 <br></br>
-                <span class="my-4 stencil text-3xl text-black ">Deepak </span> - 82399 84913
+                <span class="my-4 stencil text-3xl text-black ">Deepak </span> - 82399 84913, deepak.cse.dtu@gmail.com
                 </p>
                    
             </div>
