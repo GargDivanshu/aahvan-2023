@@ -42,7 +42,7 @@ async function handler(req, resp){
     const db = client.db("wtf")
     const collection = db.collection("users")
 
-    const result = await collection.find().toArray()
+    const result = await collection.find({}).toArray()
     client.close()
     return resp.status(200).json({result})
 

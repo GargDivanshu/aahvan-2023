@@ -2,22 +2,21 @@ import React, {useState, useEffect} from 'react'
 import {useSession, signIn, signOut} from 'next-auth/react'
 import {useRouter} from 'next/router'
 import {AiFillFileExcel} from 'react-icons/ai'
-import {message} from 'antd'
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast('Here is your toast.');
 
 const Profile = ({users}) => {
-  const [messageApi, contextHolder] = message.useMessage();
-  const success = () => {
-    messageApi.open({
-      type: 'success',
-      content: 'This is a success message',
-    });
-  };
+
 
   const router = useRouter()
     // console.log(users)
     const { data: session } = useSession()
     const { push, asPath } = useRouter()
+
+
+    
+
 
     const [college, setCollege] = useState("")
     const [file, setFile] = useState("")
@@ -35,7 +34,10 @@ const Profile = ({users}) => {
     const handleSubmit = async (e) => {
         // console.log("hello for now")
         e.preventDefault()
+        // notify()
+        if (college !== "" && file !== "" && pname !== "" && pnumber !== "") {
         let data = await fetch("https://aahvan-2023.vercel.app/api/user", {
+          
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -45,10 +47,17 @@ const Profile = ({users}) => {
                 college: college, 
                 filename: file,
                 pname: pname,
-                pnumber: pnumber
+                pnumber: pnumber,
             })
         })
-       success()
+
+        window.alert("data sent successfully")
+      } else {
+         window.alert("secretary name, secretary number, College name, and filename are must!!")
+         //const notify = () => toast("secretary name, secretary number, College name, and filename are must!!")
+       
+      }
+       
 
     }
 
@@ -56,16 +65,16 @@ const Profile = ({users}) => {
     //   // setLoading(true);
   
     //   try {
-    //     const response = await fetch('https://aahvan-2023.vercel.app/api/user', {
+    //     const response = await fetch(`http://localhost:3000/api/user/${session.user.email}`, {
     //       method: 'GET',
     //       headers: {
     //         'Content-Type': 'application/json',
     //       },
     //     });
   
-        
-    //       const result = await response.json();
-    //       setMyuserData(result.result);
+    //       const result = await response.result.json();
+    //       console.log(result)
+    //       // setMyuserData(result.result);
        
     //   } catch (err) {
     //     alert(err);
@@ -76,10 +85,8 @@ const Profile = ({users}) => {
     //   fetchUser();
     // }, []);
 
-    // const userData = myuserdata.filter((user) => user.email === session?.user?.email)[0]
 
-    // console.log(myuserdata.filter((user) => user.email === session?.user?.email)[0])
-
+    
 	const handleSignIn = () => push(`/auth/signin?callbackUrl=${asPath}`)
   return (
     <>
@@ -152,7 +159,7 @@ const Profile = ({users}) => {
            
 
             <button 
-            onClick={success}
+           onClick={notify}
             type="submit" className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] self-center'>
               Submit
             </button>
