@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import About from './about'
 import Events from './events'
 import {useRouter} from 'next/router'
+import Contact from './contact';
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
             </h2>
             <button 
             onClick={() => {router.push('auth/signin')}}
-            className="bg-[#FFB024] hover:text-[#FFB024] hover:bg-white text-black m-3 px-3 py-2 text-4xl font-bold stencil rounded-md">
+            className="bg-[#FFB024] md:mt-[23px] hover:text-[#FFB024] hover:bg-white text-black m-3 px-3 py-2 text-4xl font-bold stencil rounded-md">
               Register
             </button>
           </div>
@@ -37,6 +38,7 @@ export default function Home() {
       </main>
       <About />
       <Events />
+      <Contact/>
     </div>
   )
 }
