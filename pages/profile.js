@@ -2,9 +2,13 @@ import React, {useState, useEffect} from 'react'
 import {useSession, signIn, signOut} from 'next-auth/react'
 import {useRouter} from 'next/router'
 import {AiFillFileExcel} from 'react-icons/ai'
-import toast, { Toaster } from 'react-hot-toast';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const notify = () => toast('Here is your toast.');
+const badData = () => toast('secretary name, secretary number, College name, and filename are must!!');
+
+const goodData = () => toast('data sent successfully');
+
 
 const Profile = ({users}) => {
 
@@ -32,11 +36,11 @@ const Profile = ({users}) => {
 	}
     
     const handleSubmit = async (e) => {
-        // console.log("hello for now")
+        console.log("hello for now")
         e.preventDefault()
-        // notify()
+        //  notify()
         if (college !== "" && file !== "" && pname !== "" && pnumber !== "") {
-        let data = await fetch("https://aahvan-2023.vercel.app/api/user", {
+        let data = await fetch("http:/localhost:3000/api/user", {
           
             method: 'PUT',
             headers: {
@@ -51,9 +55,9 @@ const Profile = ({users}) => {
             })
         })
 
-        window.alert("data sent successfully")
+        goodData()
       } else {
-         window.alert("secretary name, secretary number, College name, and filename are must!!")
+        badData()
          //const notify = () => toast("secretary name, secretary number, College name, and filename are must!!")
        
       }
@@ -103,6 +107,7 @@ const Profile = ({users}) => {
         Welcome to AAHVAN - 23'. This is our registration portal and we request you to submit your details below.
         <br></br>
         We require you to send us the details of your student participants in a excel sheet along with edit access <br></br>
+        It should strictly follow the format of the given sample file
         <button onClick={()=>window.open('https://docs.google.com/spreadsheets/d/1TMIBwcX1R7j8uTpjXrejuE-zATzzCAcm9fwQ8R6As9g/edit?usp=sharing','_blank')}
         className="bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out flex my-4 px-1 self-center"><AiFillFileExcel
           fontSize={25}
@@ -149,7 +154,7 @@ const Profile = ({users}) => {
             />
 
             <label>
-              File
+              File  - (add the link of the google excel sheet of the team)
             </label>
             <input
             className="w-full bg-transparent border-2 py-2 px-2 rounded-lg border-[#BDA54F] outline-none"
@@ -159,9 +164,10 @@ const Profile = ({users}) => {
            
 
             <button 
-           onClick={notify}
+          //  onClick={notify}
             type="submit" className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] self-center'>
               Submit
+              <ToastContainer />
             </button>
         </form>
         <div className='w-10/12 px-10'>
