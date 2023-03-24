@@ -19,9 +19,9 @@ const Profile = ({users}) => {
 		push(data.url)
 	}
     
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
         // console.log("hello for now")
-
+         e.preventDefault()
         let data = await fetch("http://localhost:3000/api/user", {
             method: 'PUT',
             headers: {
@@ -37,29 +37,29 @@ const Profile = ({users}) => {
 
     }
 
-    const fetchUser = async () => {
-      // setLoading(true);
+    // const fetchUser = async () => {
+    //   // setLoading(true);
   
-      try {
-        const response = await fetch('https://aahvan-2023.vercel.app/api/user', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+    //   try {
+    //     const response = await fetch('https://aahvan-2023.vercel.app/api/user', {
+    //       method: 'GET',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //     });
   
         
-          const result = await response.json();
-          setMyuserData(result.result);
+    //       const result = await response.json();
+    //       setMyuserData(result.result);
        
-      } catch (err) {
-        alert(err);
-      } 
-    };
+    //   } catch (err) {
+    //     alert(err);
+    //   } 
+    // };
   
-    useEffect(() => {
-      fetchUser();
-    }, []);
+    // useEffect(() => {
+    //   fetchUser();
+    // }, []);
 
     // const userData = myuserdata.filter((user) => user.email === session?.user?.email)[0]
 
