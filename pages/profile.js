@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useSession, signIn, signOut} from 'next-auth/react'
 import {useRouter} from 'next/router'
 import {AiFillFileExcel} from 'react-icons/ai'
+import {BiLoaderCircle} from 'react-icons/bi'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,6 +12,8 @@ const goodData = () => toast('data sent successfully');
 
 
 const Profile = ({users}) => {
+
+  const[showLoader, setShowLoader] = useState(false)
 
 
   const router = useRouter()
@@ -36,7 +39,8 @@ const Profile = ({users}) => {
 	}
     
     const handleSubmit = async (e) => {
-        console.log("hello for now")
+        // console.log("hello for now")
+        setShowLoader(true)
         e.preventDefault()
         //  notify()
         if (college !== "" && file !== "" && pname !== "" && pnumber !== "") {
@@ -56,12 +60,13 @@ const Profile = ({users}) => {
         })
 
         goodData()
+        
       } else {
         badData()
          //const notify = () => toast("secretary name, secretary number, College name, and filename are must!!")
        
       }
-       
+       setShowLoader(false)
 
     }
 
@@ -162,13 +167,15 @@ const Profile = ({users}) => {
             />
 
            
-
+<div className="flex py-auto">
             <button 
           //  onClick={notify}
             type="submit" className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] self-center'>
               Submit
               <ToastContainer />
             </button>
+            <BiLoaderCircle className={(showLoader) ? "animate-spin my-auto mx-3": "hidden"} fontSize={45}/>
+            </div>
         </form>
         <div className='w-10/12 px-10'>
           <button onClick={handleSignOut}
