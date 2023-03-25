@@ -25,12 +25,12 @@ export default function Home() {
             <h2 className='font-inter text-2xl text-[#FFB024] font-medium'> DTU&apos;s Annual Sports Fest </h2>
           </div>
           <div className='flex flex-col'>
-            <h2>
+            <h2 className='px-8'>
               6th - 8th April 2023
             </h2>
             <button 
             onClick={() => {router.push('auth/signin')}}
-            className="bg-[#FFB024] md:mt-[23px] hover:text-[#FFB024] hover:bg-white text-black m-3 px-3 py-2 text-4xl font-bold stencil rounded-md">
+            className="bg-[#FFB024] md:mt-[23px] hover:text-[#FFB024] hover:bg-transparent border-2 border-[#FFB024] text-black m-3 px-4 py-2 text-4xl font-bold stencil rounded-md transform duration-200 ">
               Register
             </button>
           </div>

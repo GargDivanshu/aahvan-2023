@@ -96,7 +96,7 @@ const Profile = ({users}) => {
     <>
     {
         session ? (<div
-        className='w-full h-screen bg-[#101010] text-white flex flex-col items-center font-inter'
+        className='w-full h-full bg-[#101010] text-white flex flex-col items-center font-inter'
         >
         <span
         className='text-2xl pt-4 font-bold text-[#FFB124] pb-10'
@@ -105,8 +105,8 @@ const Profile = ({users}) => {
         className='w-10/12 px-10 py-5'
         >
         Welcome to AAHVAN - 23'. This is our registration portal and we request you to submit your details below.
-        <br></br>
-        We require you to send us the details of your student participants in a excel sheet along with edit access <br></br>
+        <br />
+        We require you to send us the details of your student participants in a excel sheet along with edit access <br />
         It should strictly follow the format of the given sample file
         <button onClick={()=>window.open('https://docs.google.com/spreadsheets/d/1TMIBwcX1R7j8uTpjXrejuE-zATzzCAcm9fwQ8R6As9g/edit?usp=sharing','_blank')}
         className="bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out flex my-4 px-1 self-center"><AiFillFileExcel
@@ -172,7 +172,7 @@ const Profile = ({users}) => {
         </form>
         <div className='w-10/12 px-10'>
           <button onClick={handleSignOut}
-            className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] text-xl'
+            className='bg-[#FFB124] border-2 border-[#FFB124] text-black py-3 rounded-md mt-5 font-inter font-semibold hover:bg-transparent hover:text-[#FFB124] transition duration-200 ease-in-out w-full max-w-[300px] text-xl mb-10'
           >
               Sign Out
           </button>
