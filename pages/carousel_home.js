@@ -34,46 +34,46 @@ const items = [
         <img src="static/images/powerlifting.jpeg" className="rounded-2xl w-[300px]" />
         {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
     </div>,
-     <div className="item" data-value="5">
-     <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Kabaddi</div>
-     <img src="static/images/KABADDI.jpeg" className="rounded-2xl w-[300px]" />
-     {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
- </div>,
-  <div className="item" data-value="5">
-  <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Tennis</div>
-  <img src="static/images/tennis.jpg" className=" w-[300px]" />
-  {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Table Tennis</div>
- <img src="static/images/TT.jpeg" className="w-[300px] rounded-2xl" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Volleyball</div>
- <img src="static/images/volleybal.png" className="rounded-2xl w-[300px]" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Chess</div>
- <img src="static/images/chess.jpg" className="rounded-2xl w-[300px]" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Basketball</div>
- <img src="static/images/basketball.jpg" className="rounded-2xl w-[300px]" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Handball</div>
- <img src="static/images/handball.jpg" className="rounded-2xl file:w-[300px]" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
- <div className="item" data-value="5">
- <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Taekwondo</div>
- <img src="static/images/taek.jpg" className="rounded-2xl w-[300px]" />
- {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
-</div>,
+    <div className="item" data-value="6">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Kabaddi</div>
+        <img src="static/images/KABADDI.jpeg" className="rounded-2xl w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="7">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Tennis</div>
+        <img src="static/images/tennis.jpg" className=" w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="8">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Table Tennis</div>
+        <img src="static/images/TT.jpeg" className="w-[300px] rounded-2xl" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="9">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Volleyball</div>
+        <img src="static/images/volleybal.png" className="rounded-2xl w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="10">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Chess</div>
+        <img src="static/images/chess.jpg" className="rounded-2xl w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="11">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Basketball</div>
+        <img src="static/images/basketball.jpg" className="rounded-2xl w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item" data-value="12">
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Handball</div>
+        <img src="static/images/handball.jpg" className="rounded-2xl file:w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>,
+    <div className="item p-20" data-value="13" >
+        <div className="stencil text-xl flex justify-center mr-28 font-inter text-white">Taekwondo</div>
+        <img src="static/images/taek.jpg" className="rounded-2xl w-[300px]" />
+        {/* <div className="flex justify-center mr-28 font-inter text-white">🏆Prize - 20000k</div> */}
+    </div>
 ];
 
 export default function Carousel_home() {
