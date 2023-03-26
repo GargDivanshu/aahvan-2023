@@ -89,6 +89,22 @@ const Team = () => {
                 </span>
             </span>
         </span>
+
+
+        <span className='flex flex-col items-center border-2 rounded-lg py-2 border-[#ffffff29] pb-2'>
+            <span class="my-1 stencil text-3xl font-semibold text-[#FFB024] ">Aditya</span>
+            <span className='flex flex-col items-center'>
+                <p className='pb-1'>Lead Developer</p>
+                <span className='flex gap-2 items-center pb-2'>
+                    <a href='https://www.linkedin.com/in/aditya-sharma-406149202' className='text-white hover:text-[#cecece] active:text-white visited:text-white visited:no-underline' target='_blank' rel='noopener noreferrer'>
+                        <FaLinkedin size={20} />
+                    </a>
+                    <a href='https://github.com/ady1812sha' className='text-white hover:text-[#cecece] active:text-white visited:text-white visited:no-underline' target='_blank' rel='noopener noreferrer'>
+                        <FaGithub size={20} />
+                    </a>
+                </span>
+            </span>
+        </span>
         </div>
     </div>
   )
