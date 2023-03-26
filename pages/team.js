@@ -7,7 +7,7 @@ const Team = () => {
         <span className='text-7xl pt-10 pb-5 stencil font-bold text-[#FFB024] h-full'>
             Team
         </span>
-        <div className='h-full w-2/3 grid grid-cols-3 gap-4'>
+        <div className='h-full w-2/3 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4'>
         <span className='flex flex-col items-center border-2 rounded-lg py-2 border-[#ffffff29] pb-2'>
             <span class="my-1 stencil text-3xl font-semibold text-[#FFB024] ">Divanshu Garg</span> <span className='flex flex-col items-center'>
                 <p className='pb-1'>Backend Developer</p>
