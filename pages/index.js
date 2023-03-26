@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Aahvan - 2023</title>
         <meta name="description" content="The Inter College Sports Fest of Delhi Technological University" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/aahvan-fav.ico" />
       </Head>
       <div className="my-auto min-h-fit bg-black overflow-hidden">
         <button
