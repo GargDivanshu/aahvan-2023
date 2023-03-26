@@ -25,7 +25,7 @@ export default function Home() {
             <h2 className='font-inter text-center text-2xl text-[#FFB024] font-medium'> DTU&apos;s Annual Sports Fest </h2>
           </div>
           <div className='flex flex-col'>
-            <h2>
+            <h2 className='px-8'>
               6th - 8th April 2023
             </h2>
             <button
