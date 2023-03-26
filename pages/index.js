@@ -31,13 +31,13 @@ export default function Home() {
       
         <div className='w-full h-screen flex flex-col opacity-80 bg-black text-white items-center justify-center bg-hero bg-cover'>
           <div className='flex flex-col justify-center relative'>
-            <img src='/static/images/main-rect.png' className='absolute left-[-37vw] h-[900px] hidden sm:block' />
+            <img src='/static/images/main-rect.png' className=' absolute left-[-37vw] h-[900px] hidden sm:block' />
             <h1 className='stencil text-6xl lg:text-8xl font-bold text-white '> AAHVAAN </h1>
             <img src='/static/images/main-rect.png' className='absolute right-[-35vw] h-[900px] rotate-180 hidden sm:block' />
-            <h2 className='font-inter text-center text-2xl text-[#FFB024] font-medium'> DTU&apos;s Annual Sports Fest </h2>
+            <h2 className='font-inter font-medium text-center text-2xl text-[#FFB024] '> DTU&apos;s Annual Sports Fest </h2>
           </div>
           <div className='flex flex-col'>
-            <h2 className='px-8'>
+            <h2 className='px-8 font-medium'>
               6th - 8th April 2023
             </h2>
             <button
