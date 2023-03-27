@@ -5,7 +5,7 @@ const Team = () => {
   return (
     <div className='flex flex-col items-center justify-start min-h-screen h-full w-full bg-[#101010] text-white font-inter'>
         <span className='text-7xl pt-10 pb-5 stencil font-bold text-[#FFB024] h-full'>
-            Team
+            Technical Team
         </span>
         <div className='h-full w-2/3 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-4'>
         <span className='flex flex-col items-center border-2 rounded-lg py-2 border-[#ffffff29] pb-2'>
