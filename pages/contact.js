@@ -11,6 +11,10 @@ const Contact = () => {
           <span className="my-4 stencil text-3xl text-black ">Pawan Choudhary</span> - 90539 95493, Thepawankumar2003@gmail.com
           <br></br>
           <span className="my-4 stencil text-3xl text-black ">Rohanaditya Singh Thakur</span> - 98702 55702, rohanadityasinghthakur@gmail.com
+          <br></br>
+          <span className="my-4 stencil text-3xl text-black ">Ayush Dev</span> - 93184 85779
+          <br></br>
+          <span className="my-4 stencil text-3xl text-black ">Rakshit Hooda</span> - 98170 38133
         </p>
 
       </div>
