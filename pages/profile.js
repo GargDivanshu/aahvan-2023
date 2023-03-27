@@ -44,7 +44,7 @@ const Profile = ({users}) => {
         e.preventDefault()
         //  notify()
         if (college !== "" && file !== "" && pname !== "" && pnumber !== "") {
-        let data = await fetch("https://aahvan-2023.vercel.app//api/user", {
+        let data = await fetch("https://www.aahvaandtu.tech/api/user", {
           
             method: 'PUT',
             headers: {
